@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>2017/1/10自我总结</title>
+		<style>
+			.box{
+				width: 800px;
+				height: auto;
+				margin: auto;
+				background-color: gainsboro;
+				border: 1px solid black;
+			}
+			.box>b{
+				display: block;
+				width: 700px;
+				height: 50px;
+				font-size: 30px;
+				line-height: 50px;
+				padding-left:100px ;
+				font-family: "微软雅黑";
+			}
+			.box>ul{
+				list-style: none;
+			}
+			.box>ul>li{
+				font-family: "微软雅黑";
+				font-size: 15px;
+				width: 800px;
+				height: 30px;
+				line-height: 30px;
+			}
+			.title>li:hover{
+				color: red;
+			}
+			.title>li>div{
+				width: 500px;
+				height: 30px;
+				display: none;
+				background: white;
+				color: black;
+				margin-left: 100px;
+				margin-top: -30px;
+			}
+			.title>li:hover div{
+				display: block;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<b>js</b>
+			<ul>
+				<li>js是指动态的，基于原型的脚本语言</li>
+				<li>值类型：数值、布尔、null、undefin</li>
+				<li>引用类型：对象、数组、函数</li>
+				<li>js分常量和变量，常量市用const声明（不可变）</li>
+			</ul>
+			<b>函数声明的方式</b>
+			<ul class="title">
+				<li>函数声明方式
+				<div>
+					例：function fun(){};
+				</div>
+				</li>
+				<li>函数表达方式
+				<div>
+					例：var fun = function(){};
+				</div>
+				</li>
+				<li>函数匿名声明
+				<div>
+					例：(function(){})();
+				</div>   
+				</li>
+				<li>函数动态声明
+				<div>
+					例：var f3 = new function('a=1','b=2','return a+b')
+				</div> 
+				</li>
+			</ul>
+			<b>函数参数</b>
+			<ul>
+				<li>arguments为伪数组</li>
+				<li>函数参数可以是函数名</li>
+			</ul>
+			<b>事件调用</b>
+			<b>DOM</b>
+			<ul>
+				<li>DOM一般说是HTML，DOM也就是W3C的DOM</li>
+				<li>Document Object Model</li>
+			</ul>
+			<b>BOM</b>
+			<ul>
+				<li>各个浏览器不一，Window对象，约等于类</li>
+			</ul>
+			<b>闭包</b>
+			<ul>
+				<li>访问一个函数内部声明的一个函数</li>
+			</ul>
+			<b>THIS</b>
+			<ul class="title">
+				<li>指向标签</li>
+				<li>指向window
+				<div>
+					例：function foo(){console.log()};foo();
+				</div>
+				</li>
+				<li>指向对象
+				<div>
+					例：var abj = {}；obj.fun = function(e){
+						console.log(this);}obj.fun();
+				</div>
+				</li>
+				<li>'this'指向的是调用是所在的环境对象</li>
+				<li>apply，call能够改变函数的this指向</li>
+			</ul>
+		</div>
+	</body>
+</html>
