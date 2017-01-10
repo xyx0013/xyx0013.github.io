@@ -3,16 +3,37 @@
 	padding: 0px;
 }
 .title{
-	width: 400px;
-	height: 150px;
-	font-size: 60px;
-	font-family: "微软雅黑";
+	width: 1150px;
+	height: 200px;
 	border-radius: 10px;
-	line-height: 150px;
-	text-align: center;
-	background-color: gray;
-	color: white;
+	background-image: url(title.jpg);
 	margin: auto;
+}
+.title>img{
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	display: block;
+	padding: 20px;
+}
+.title>ul{
+	list-style: none;
+}
+.title>ul>li{
+	float: left;
+	width: 100px;
+	height: 30px;
+	font-size: 20px;
+	font-family: "微软雅黑";
+	color: white;
+	margin-left: 20px;
+	margin-top: 10px;
+	text-align: center;
+	line-height: 30px;
+	border-radius: 5px;
+}
+.title>ul>li:hover{
+	background-color: #f0bf00;
 }
 p{
 	font-size: 20px;
@@ -54,4 +75,5 @@ p{
 .content>ul>li>a:hover{
 	color: red;
 }
+
 
