@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>2017/1/10自我总结</title>
+		<style>
+			.box{
+				width: 800px;
+				height: auto;
+				margin: auto;
+				background-color: gainsboro;
+				border: 1px solid black;
+			}
+			.box>b{
+				display: block;
+				width: 700px;
+				height: 50px;
+				font-size: 30px;
+				line-height: 50px;
+				padding-left:100px ;
+				font-family: "微软雅黑";
+			}
+			.box>ul{
+				list-style: none;
+			}
+			.box>ul>li{
+				font-family: "微软雅黑";
+				font-size: 15px;
+				width: 800px;
+				height: 30px;
+				line-height: 30px;
+			}
+			.title>li:hover{
+				color: red;
+			}
+			.title>li>div{
+				width: 500px;
+				height: auto;
+				display: none;
+				background: white;
+				color: black;
+				margin-left: 250px;
+				margin-top: -30px;
+			}
+			.title>li:hover div{
+				display: block;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<b>函数原型及原型列</b>
+			<ul>
+				<li>构造函数</li>
+				<li>原型对象与实例对象</li>
+				<li>注意</li>
+			</ul>
+			<b>构造函数</b>
+			<ul class="title">
+				<li>可以简单理解为new关键字后面的函数
+				<div>
+					例：function Person(){};var student = new Person();
+				</div>
+				</li>
+				<li>函数命名建议首字母大写</li>
+				<li>构造函数特点
+				<div>
+					用new关键字调用，没有显示创建对象
+				             函数内部可以使用this关键字
+					 默认不用return返回值
+				</div>   
+				</li>
+				<li>构造函数过程
+				<div>
+					将构造函数的this指向实例，__proto__指原型指针
+					Person.prototype指原型对象
+				</div> 
+				</li>
+			</ul>
+			<b>原型对象与实例对象</b>
+			<ul>
+				<li>在javascript中，每个对象都有一个与之相关联的对象，那就是它的原型对象</li>
+				<li>类的所有实例对象都从它的原型对象上继承属性</li>
+				<li>唯一标识，当且仅当两个对象继承自同一个原型对象时，它们才是属于同一个类的实例</li>
+			</ul>
+			<b>构造函数拥有一个prototype属性，指向原型</b>
+			<ul>
+				<li>也就是一个对象的原型就是它的构造函数的prototype属性的值</li>
+				<li>当一个函数被定义的时候，它会自动创建和初始化prototype值，
+                                                           它是一个对象，这个对象只有一个属性：constructor</li>
+				<li>可以通过原型来创建属性和方法</li>
+				<li>建议在构造函数内定义一般成员</li>
+			</ul>
+			<b>注意</b>
+			<ul>
+				<li>如果原型对象被赋值为一个对象时相当于重写了整个原型对象</li>
+				<li>如果想要让它重新指向Person，可以显示的进行赋值</li>
+			</ul>
+			<b>补充</b>
+			<ul>
+				<li>null == undefined >> true</li>
+				<li>null === undefined >> false</li>
+			</ul>
+		</div>
+	</body>
+</html>
