@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>2017/1/13自我总结</title>
+		<style>
+			.box{
+				width: 800px;
+				height: auto;
+				margin: auto;
+				background-color: gainsboro;
+				border: 1px solid black;
+			}
+			.box>b{
+				display: block;
+				width: 700px;
+				height: 50px;
+				font-size: 30px;
+				line-height: 50px;
+				padding-left:100px ;
+				font-family: "微软雅黑";
+			}
+			.box>ul{
+				list-style: none;
+			}
+			.box>ul>li{
+				font-family: "微软雅黑";
+				font-size: 15px;
+				width: 800px;
+				height: 30px;
+				line-height: 30px;
+			}
+			.title>li:hover{
+				color: red;
+			}
+			.title>li>div{
+				width: 500px;
+				height: auto;
+				display: none;
+				background: white;
+				color: black;
+				margin-left: 250px;
+				margin-top: -30px;
+			}
+			.title>li:hover div{
+				display: block;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<b>CANVAS</b>
+			<ul>
+				<li>默认宽高：300px，150px（内嵌更改宽高）</li>
+			</ul>
+			<b>运用过程</b>
+			<ul class="title">
+				<li>第一步：创建获取canvas画布对象
+				<div>
+					例：var canvas = document.getElementBy()
+				</div>
+				</li>
+				<li>第二步：获取上下文绘图环境
+				<div>
+					var ctx = canvas.getContext('2d')
+				</div>   
+				</li>
+				<li>绘制图形
+				<div>
+					fillStyle填充颜色
+					ctx.fillRect(x,y,宽,高)
+				</div> 
+				</li>
+				<li>ctx.clearRect（清除指定区域像素）</li>
+				<li>画圆
+				<div>
+					ctx.beginPath();
+					ctx.arc(x,y,r,起始角,结束角)
+					ctx.stroke()
+				</div> 
+				</li>
+				<li>创建线性渐变
+				<div>
+					var grd=ctx.createLinearGradient(渐变开始x,渐变开始y,渐变结束x,渐变结束y);
+                    grd.addColorStop(0,"black");
+                    grd.addColorStop(1,"white");
+                    ctx.fillStyle=grd;
+                    ctx.fillRect(20,20,150,100);
+				</div> 
+				</li>
+				<li>添加一个新点，然后在画布中创建从该点到最后指定点的线条
+				<div>
+					ctx.beginPath();
+                    ctx.moveTo(0,0);
+                    ctx.lineTo(300,150);
+                    ctx.stroke();
+				</div> 
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>
