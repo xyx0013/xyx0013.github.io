@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>2017/1/17自我总结</title>
+		<style>
+			.box{
+				width: 800px;
+				height: auto;
+				margin: auto;
+				background-color: gainsboro;
+				border: 1px solid black;
+			}
+			.box>b{
+				display: block;
+				width: 700px;
+				height: 50px;
+				font-size: 30px;
+				line-height: 50px;
+				padding-left:100px ;
+				font-family: "微软雅黑";
+			}
+			.box>ul{
+				list-style: none;
+			}
+			.box>ul>li{
+				font-family: "微软雅黑";
+				font-size: 15px;
+				width: 800px;
+				height: 30px;
+				line-height: 30px;
+			}
+			.title>li:hover{
+				color: red;
+			}
+			.title>li>div{
+				width: 500px;
+				height: 30px;
+				display: none;
+				background: white;
+				color: black;
+				margin-left: 100px;
+				margin-top: -30px;
+			}
+			.title>li:hover div{
+				display: block;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<b>currentTime</b>
+			<ul>
+				<li>设置或返回音频中的当前播放位置（以秒计）</li>
+			</ul>
+			<b>duration</b>
+			<ul>
+				<li>返回音频的长度（以秒计）</li>
+			</ul>
+			<b>buffered</b>
+			<ul>
+				<li>返回表示音频已缓冲部分的 TimeRanges对象</li>
+			</ul>
+			<b>TimeRanges</b>
+			<ul>
+				<li>buffered 属性返回 TimeRanges 对象</li>
+                <li>TimeRanges 对象表示用户的音视频缓冲范围</li>
+                <li>缓冲范围指的是已缓冲音视频的时间范围。如果用户在音视频中跳跃播放，会得到多个缓冲范围</li>
+                <li>length - 获得音视频中已缓冲范围的数量</li>
+                <li>start(index) - 获得某个已缓冲范围的开始位置</li>
+                <li>end(index) - 获得某个已缓冲范围的结束位置</li>
+			</ul>
+		</div>
+	</body>
+</html>
+	</body>
+</html>
