@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>2017/1/16自我总结</title>
+		<style>
+			.box{
+				width: 800px;
+				height: auto;
+				margin: auto;
+				background-color: gainsboro;
+				border: 1px solid black;
+			}
+			.box>b{
+				display: block;
+				width: 700px;
+				height: 50px;
+				font-size: 30px;
+				line-height: 50px;
+				padding-left:100px ;
+				font-family: "微软雅黑";
+			}
+			.box>ul{
+				list-style: none;
+			}
+			.box>ul>li{
+				font-family: "微软雅黑";
+				font-size: 15px;
+				width: 800px;
+				height: 30px;
+				line-height: 30px;
+			}
+			.title>li:hover{
+				color: red;
+			}
+			.title>li>div{
+				width: 500px;
+				height: 30px;
+				display: none;
+				background: white;
+				color: black;
+				margin-left: 100px;
+				margin-top: -30px;
+			}
+			.title>li:hover div{
+				display: block;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<b>像素</b>
+			<ul>
+				<li>1px是由rgba组成</li>
+				<li>RGBA值(0是透明的，225是完全可见的)</li>
+				<li>R-红色(0-225)</li>
+				<li>G-绿色(0-225)</li>
+				<li>B-蓝色(0-225)</li>
+				<li>A-alpha通道(0-225)</li>
+			</ul>
+			<b>ImageData</b>
+			<ul class="title">
+				<li>ImageData方法返回ImageData对象，该对象拷贝了画布指定对象的像素数据</li>
+				<li>对于ImageData对象中的每个像素，都存在着四方面的信息，即RGBA值。</li>
+				<li>color/alpha以数组形式存在的，并储存于ImageData对象的data属性中</li>
+				<li>函数动态声明
+				<div>提示：在操作玩数组中的color/alpha信息之后，可以使用ImageData方法将图像数据拷贝回画布上</li>
+			</ul>
+			<b>图形的保存与恢复</b>
+			<ul>
+				<li>save方法把当前状态压入栈中</li>
+				<li>restore方法从栈顶弹出状态</li>
+				<li>save保存canvas状态，保存之后，可以调用canvas的平移、缩放、旋转、错切、剪裁等方法进行操作，再用restore方法恢复之前保存的状态。</li>
+				<li>注意：save和restore要配对使用(restore可以比save少，但不能多)</li>
+			</ul>
+			<b>转化图片</b>
+			<ul>
+				<li>window.location = --.canvas.toDataURL('image/png')</li>
+			</ul>
+			<b>HTML5音视频</b>
+			<ul>
+				<li><video src="" autoplay="马上播放" controls="显示控件" loop="循环播放" preload="预加载"></video></li>
+				<li><audio src="" autoplay="马上播放" controls="显示控件" loop="循环播放" preload="预加载"></audio></li>
+			</ul>
+		</div>
+	</body>
+</html>
+	</body>
+</html>
