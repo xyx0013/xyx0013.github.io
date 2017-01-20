@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>2017/1/18自我总结</title>
+		<style>
+			.box{
+				width: 800px;
+				height: auto;
+				margin: auto;
+				background-color: gainsboro;
+				border: 1px solid black;
+			}
+			.box>b{
+				display: block;
+				width: 700px;
+				height: 50px;
+				font-size: 30px;
+				line-height: 50px;
+				padding-left:100px ;
+				font-family: "微软雅黑";
+			}
+			.box>ul{
+				list-style: none;
+			}
+			.box>ul>li{
+				font-family: "微软雅黑";
+				font-size: 15px;
+				width: 800px;
+				height: 30px;
+				line-height: 30px;
+			}
+			.title>li:hover{
+				color: red;
+			}
+			.title>li>div{
+				width: 500px;
+				height: 30px;
+				display: none;
+				background: white;
+				color: black;
+				margin-left: 100px;
+				margin-top: -30px;
+			}
+			.title>li:hover div{
+				display: block;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<b>音频歌词解析</b>
+			<ul>
+				<li>先建立一个歌词（包括时间和文字）的数组 var str = [];</li>
+                <li>利用slipt进行拆分 var app = str[i].split('[')</li>
+                <li>再建立一个用于装文字歌词的数组add</li>
+                <li>var add = app[i].split(']')[1]</li>
+                <li>以上获取单纯的文字歌词</li>
+			</ul>
+		</div>
+	</body>
+</html>
+	</body>
+</html>
