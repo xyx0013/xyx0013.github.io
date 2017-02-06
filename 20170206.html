@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>2017/2/06自我总结</title>
+		<style>
+			.box{
+				width: 800px;
+				height: auto;
+				margin: auto;
+				background-color: gainsboro;
+				border: 1px solid black;
+			}
+			.box>b{
+				display: block;
+				width: 700px;
+				height: 50px;
+				font-size: 30px;
+				line-height: 50px;
+				padding-left:100px ;
+				font-family: "微软雅黑";
+			}
+			.box>ul{
+				list-style: none;
+			}
+			.box>ul>li{
+				font-family: "微软雅黑";
+				font-size: 15px;
+				width: 800px;
+				height: 30px;
+				line-height: 30px;
+			}
+			.title>li:hover{
+				color: red;
+			}
+			.title>li>div{
+				padding-left: 20px;
+				width: 500px;
+				height: auto;
+				display: none;
+				background: white;
+				color: black;
+				margin-left: 250px;
+				margin-top: -30px;
+				position: absolute;
+				z-index: 10;
+			}
+			.title>li:hover div{
+				display: block;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<b>Javascript设计模式</b>
+			<ul class="title">
+				<li>工厂模式
+				<div>
+					function Factory(name,age,sex){ <br/>
+					var obj = {};<br/>
+					obj.name = name;<br/>
+					obj.age = age;<br/>
+					obj.sex = sex;<br/>
+					obj.fun = function(){};<br/>
+					return obj;}<br/>
+					var student = Factory('张三','100','男')
+				</div>
+				</li>
+			</ul>
+			<b>AJAX</b>
+			<ul>
+				<li>Asynchronous Javascript And XML(异步的Javascript和XML)</li>
+				<li>是一种用于创建快速动态网页的技术</li>
+			</ul>
+			<b>AJAX流程</b>
+			<ul class="title">
+				<li>1、创建XMLHttpquest对象
+				<div>
+					var xhr = XMLHttpquest();
+				</div>
+				</li>
+				<li>2、发送AJAX请求
+				<div>
+					a、open<br/>
+					b、send方法<br/>
+					注意：域名、端口、协议相同
+				</div>
+				</li>
+				<li>3、接受请求
+				<div>
+					onreadystatechange属性<br/>
+					a、readyState<br/>
+					b、status<br/>
+				</div>
+				</li>
+			</ul>
+			<b>XMLHttpquest</b>
+			<ul class="title">
+				<li>XMLHttpRequest对象对于和服务器交换数据</li>
+                <li>xmlhttp.open('GET','文件地址',TRUE)</li>
+                <li>xmlhttp.send()</li>
+                <li>方法:</li>
+                <li>open(method,url,async)
+                <div>
+					method请求的类型GET或POST
+				</div>
+                </li>
+                <li>send将请求发送到服务器</li>
+                <li>与POST相比GET更简单也更快并且大部分情况下都能用</li>
+                <li>POST使用情况
+                <div>
+					1、无法使用缓存文件<br />
+					2、向服务器发送大量数据(POST没有数据量限制)<br />
+					3、发送包含未知字符的用户输入时，POST比GET更稳定可靠
+				</div>
+                </li>
+			</ul>
+			<b>服务器响应</b>
+			<ul class="title">
+				<li>使用XMLHttpRequest对象的responseText或responseXML</li>
+                <li>属性
+                <div>
+                	responseText获得字符串形成的相应数据<br />
+                	responseXML获得XML形成的响应数据
+                </div>
+                </li>
+                <li>responseText使用
+                <div>
+                	document.getElementById().innerHTML = xmlHttp.responseText
+                </div>
+                </li>
+                <li>responseXML使用
+                <div>
+                	xmlDot = xmlHttp.responseXML;<br />
+                	text = '';<br />
+                	x = xmlDoc.getElementsByTagName();<br />
+                	for(i = 0;i<x.length;i++){ <br/>
+                		text = text + x[i].childNodes.[0].nodeValue + '<br/>';}<br />
+                	document.getElementById().innerHTML = text;
+                </div>
+                </li>
+                <li>当readyState等于4且状态为200时，表示响应已就绪</li>
+                <li>注意
+                <div>
+                	1XX消息<br/>
+                	2XX请求成功<br/>
+                	3XX重定向<br/>
+                	4XX请求错误<br/>
+                	5XX服务器错误<br/>
+                	6XX服务器错误<br/>
+                </div>
+                </li>
+			</ul>
+		</div>
+	</body>
+</html>
+	</body>
+</html>
