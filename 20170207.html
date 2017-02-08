@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>2017/2/7自我总结</title>
+		<style>
+			.box{
+				width: 800px;
+				height: auto;
+				margin: auto;
+				background-color: gainsboro;
+				border: 1px solid black;
+			}
+			.box>b{
+				display: block;
+				width: 700px;
+				height: 50px;
+				font-size: 30px;
+				line-height: 50px;
+				padding-left:100px ;
+				font-family: "微软雅黑";
+			}
+			.box>ul{
+				list-style: none;
+			}
+			.box>ul>li{
+				font-family: "微软雅黑";
+				font-size: 15px;
+				width: 800px;
+				height: 30px;
+				line-height: 30px;
+			}
+			.title>li:hover{
+				color: red;
+			}
+			.title>li>div{
+				padding-left: 20px;
+				width: 500px;
+				height: auto;
+				display: none;
+				background: white;
+				color: black;
+				margin-left: 250px;
+				margin-top: -30px;
+				position: absolute;
+				z-index: 10;
+			}
+			.title>li:hover div{
+				display: block;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<b>jQuery</b>
+			<ul class="title">
+				<li>核心功能
+				<div>
+					查询功能
+					jQuery([selector,[context]])
+					selector:用来查找的字符串
+                    context:作为待查找的 DOM 元素集、文档或 jQuery 对象。
+                    jQuery 的核心功能都是通过这个函数实现的。 
+					jQuery中的一切都基于这个函数，或者说都是在以某种方式使用这个函数。
+					这个函数最基本的用法就是向它传递一个表达式（通常由 CSS 选择器组成），然后根据这个表达式来查找所有匹配的元素。
+                </div>
+				</li>
+			</ul>
+			<b>jQuery步骤</b>
+			<ul class="title">
+				<li>1、下载：http://jquery.com/</li>
+				<li>2、引入：引入js文件
+				<div>
+					a、本地引入方式（在项目里引用）<br/>
+					b、CDN：国外（googleCDN，MicrosoftCDN）<br/>
+					国内：百度CDN
+				</div>
+				</li>
+				<li>3、使用
+				<div>
+					jQuery入口函数等document准备就绪后开始执行<br/>
+				</div>
+				</li>
+				<li>4、选择器
+				<div>
+					基础选择器：a、ID b、class c、标签/标记 节点  d、通配选择器/通用选择器/全部选择器  e、组合选择器
+				</div>
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>
+	</body>
+</html>
