@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>2017/2/9自我总结</title>
+		<style>
+			.box{
+				width: 800px;
+				height: auto;
+				margin: auto;
+				background-color: gainsboro;
+				border: 1px solid black;
+			}
+			.box>b{
+				display: block;
+				width: 700px;
+				height: 50px;
+				font-size: 30px;
+				line-height: 50px;
+				padding-left:100px ;
+				font-family: "微软雅黑";
+			}
+			.box>ul{
+				list-style: none;
+			}
+			.box>ul>li{
+				font-family: "微软雅黑";
+				font-size: 15px;
+				width: 800px;
+				height: 30px;
+				line-height: 30px;
+			}
+			.title>li:hover{
+				color: red;
+			}
+			.title>li>div{
+				padding-left: 20px;
+				width: 500px;
+				height: auto;
+				display: none;
+				background: white;
+				color: black;
+				margin-left: 250px;
+				margin-top: -30px;
+				position: absolute;
+				z-index: 10;
+			}
+			.title>li:hover div{
+				display: block;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<b>jQuery Event</b>
+			<ul>
+				<li>Event Modle</li>
+				<li>事件分类</li>
+				<li>事件处理</li>
+			</ul>
+			<b>Event Modle</b>
+			<ul class="title">
+				<li>捕获阶段-Event Capturing
+				<div>
+					允许多个元素响应单击事件的一种策略叫做事件捕获
+					在事件捕获的过程中，事先首先会交给最外层的元素，接着再交给更具体的元素
+				</div>
+				</li>
+				<li>冒泡阶段-Event Bubbling
+				<div>
+					与捕获事件相反，即当事件发生时，会首先发给最具体的元素
+					在这个元素获得响应机会之后，事件会向上冒泡到更一般的元素。 
+				</div>
+				</li>
+				<li>DOM
+				<div>
+					开发者们最初采用的是不同的事件传播模型。
+					DOM标准规定应该同时使用这两种策略：首先，事件要从一般到具体进行捕获，
+					然后事件再过冒泡返回DOM树的顶层。而事件处理程序可以注册到这个过程中的任何一部分。
+				</div>
+				</li>
+				<li>注意
+				<div>
+					并不是所有的浏览器都为了与新标准保持一致而进行了更新。
+					对于那些支持捕获的浏览器来说，通常必须明确启用才行。
+					为了提供跨浏览器的一致性，jQuery始终在模型的冒泡阶段注册处理程序。
+					因此，我们总是可以假定最具体的元素会首先获得响应事件的机会
+				</div>
+				</li>
+			</ul>
+			<b>事件分类</b>
+			<ul class="title">
+				<li>与浏览器相关
+				<div>
+					分为ready,scroll,resize
+				</div>
+				</li>
+				<li>鼠标相关
+				<div>
+					分为click,dblclick,hover,blur(focus:focusin,focusout)
+					mousedown,mousemove,mouseout,mouseover,mouseup
+				</div>
+				</li>
+				<li>与键盘相关
+				<div>
+					keydown,keypress,keyup
+				</div>
+				</li>
+			</ul>
+			<b>事件处理</b>
+			<ul>
+				<li>绑定事件</li>
+				<li>移除事件</li>				
+			</u>
+			<b>绑定事件</b>
+			<ul>
+				<li>on()方法为所有当前的−以及之后的−匹配元素将一个处理程序捆绑到一个事件上(如点击)。 也可以捆绑自定义事件。</li>
+				<li>bind()方法为每个匹配的元素将一个处理程序捆绑到一个或多个事件上(如点击)。也可以捆绑自定义事件</li>
+				<li>one()方法为每个匹配的元素将一个处理程序绑定到一个或多个要被执行的事件上。</li>
+				<li>hover(over, out)方法模拟徘徊，例如将鼠标移动到一个对象上，并将鼠标从该对象上移开</li>
+				<li>trigger()方法触发被选元素的指定事件类型</li>
+				<li>live()方法-注意版本支持该方法为整个页面生命周期内的某一类对象绑定一个事件处理程序</li>
+			</u>
+			<b>移除事件</b>
+			<ul>
+				<li>unbind()方法该方法实现绑定相反的操作，它从每个匹配的元素中删除绑定的事件。</li>
+				<li>off()方法该方法实现的是live的对立面，它删除了捆绑的 live 事件</li>	
+				<li>die([type][,fn])方法die方法与live方法对应，用于解除用live注册的自定义事件 ， type用于指定要删除的事件类型，fn用于指定要删除的事件处理程序的名称。</li>
+			</u>
+		</div>
+	</body>
+</html>
+	</body>
+</html>
