@@ -1,1 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>2017/2/8自我总结</title>
+		<style>
+			.box{
+				width: 800px;
+				height: auto;
+				margin: auto;
+				background-color: gainsboro;
+				border: 1px solid black;
+			}
+			.box>b{
+				display: block;
+				width: 700px;
+				height: 50px;
+				font-size: 30px;
+				line-height: 50px;
+				padding-left:100px ;
+				font-family: "微软雅黑";
+			}
+			.box>ul{
+				list-style: none;
+			}
+			.box>ul>li{
+				font-family: "微软雅黑";
+				font-size: 15px;
+				width: 800px;
+				height: 30px;
+				line-height: 30px;
+			}
+			.title>li:hover{
+				color: red;
+			}
+			.title>li>div{
+				padding-left: 20px;
+				width: 500px;
+				height: auto;
+				display: none;
+				background: white;
+				color: black;
+				margin-left: 250px;
+				margin-top: -30px;
+				position: absolute;
+				z-index: 10;
+			}
+			.title>li:hover div{
+				display: block;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<b>jQuery 网络请求</b>
+			<ul>
+				<li>1.load( url,[data],[callback])载入远程 HTML文件代码并插入至DOM中</li>
+				<li>url(String):请求的HTML页的URL地址</li>
+				<li>data(Map):(可选参数)发送至服务器的key/value数据</li>
+				<li>callback(Callback):(可选参数)请求完成时(不需要是success的)的回调函数。</li>
+				<li>这个方法默认使用 GET方式来传递的,如果[data]参数有传递数据进去,就会自动转换为POST方式的.</li>
+				<li>jQuery1.2 中,可以指定选择符,来筛选载入的HTML文档,DOM中将仅插入筛选出的HTML代码.语法形如 "url #some > selector"</li>
+				<li>这个方法可以很方便的动态加载一些HTML文件,例如表单。</li>
+			</ul>
+			<ul>
+				<li>2.jQuery.get(url,[data],[callback])使用GET方式来进行异步请求</li>
+				<li>参数：url(String):发送请求的URL地址.</li>
+				<li>data (Map):(可选)要发送给服务器的数据,以 Key/value的键值对形式表示,会做为QueryString附加到请求URL中</li>
+				<li>callback(Function):(可选)载入成功时回调函数(只有当Response的返回状态是success才是调用该方法)</li>
+				<li>这是一个简单的GET请求功能以取代复杂 $.ajax.请求成功时可调用回调函数.如果需要在出错时执行函数,请使用 $.ajax</li>
+			</ul>
+			
 
+
+
+
+
+
+
+
+
+
+
+		</div>
+	</body>
+</html>
+	</body>
+</html>
