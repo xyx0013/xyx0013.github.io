@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>2017/2/15自我总结</title>
+		<style>
+			.box{
+				width: 800px;
+				height: auto;
+				margin: auto;
+				background-color: gainsboro;
+				border: 1px solid black;
+			}
+			.box>b{
+				display: block;
+				width: 700px;
+				height: 50px;
+				font-size: 30px;
+				line-height: 50px;
+				padding-left:100px ;
+				font-family: "微软雅黑";
+			}
+			.box>ul{
+				list-style: none;
+			}
+			.box>ul>li{
+				font-family: "微软雅黑";
+				font-size: 15px;
+				width: 800px;
+				height: 30px;
+				line-height: 30px;
+			}
+			.title>li:hover{
+				color: red;
+			}
+			.title>li>div{
+				padding-left: 20px;
+				width: 500px;
+				height: auto;
+				display: none;
+				background: white;
+				color: black;
+				margin-left: 250px;
+				margin-top: -30px;
+				position: absolute;
+				z-index: 10;
+			}
+			.title>li:hover div{
+				display: block;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<b>html5</b>
+			<b>html5新特性</b>
+			<ul class="title">
+				<li>语义化
+				<div>
+					能够让你更恰当地描述你的内容
+				</div>
+				</li>
+				<li>连通性
+				<div>
+					能够让你和服务器之间通过创新的新技术方法进行通信
+				</div>
+				</li>
+				<li>离线存储
+				<div>
+					能够让网页在客户端本地存储数据以及更高效地离线运行
+				</div>
+				</li>
+				<li>多媒体
+				<div>
+					提供了一个更加分化范围的呈现选择
+				</div>
+				</li>
+				<li>性能集成
+				<div>
+					提供了非常显著的性能优化和更有效的计算机硬件使用
+				</div>
+				</li>
+				<li>设备访问
+				<div>
+					能够处理各种输入和输出设备
+				</div>
+				</li>
+			</ul>
+			<b>主题定义</b>
+			<ul class="title">
+				<li>"!DOCTYPE": 定义文档类型
+				<div>
+					HTML4: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN""http://www.w3.org/TR/html4/loose.dtd">
+				    XHTML 1.0：<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+				    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+				</div>
+				</li>
+				<li>"html": 定义
+				<div>
+					HTML4: 等同
+				</div>	
+				</li>
+				<li>"head": 定义文档的头部.(头部内包含)
+				<div>
+					<base>:定义页面上的所有链接规定默认地址或默认目标
+				</div>	
+				</li>
+				<li>"body": 定义文档的主体(脚
+				<div>
+					template 通过JavaScript在运行时实例化内容的容器
+				</div>	
+				</li>
+			</ul>
+			<b>章节结构</b>
+			<ul class="title">
+				<li>"section" 定义文档中的一个章节，一般来说会有包含一个 heading
+				<div>
+					HTML4: <div></div>
+				</div>	
+				</li>
+				<li>"nav"定义一个含有多个超链接的区域，这个区域包含转到其他页面，或者页面内部其他部分的链接列表
+				<div>
+					HTML4:<ul></ul>
+				</div>	
+				</li>
+				<li>"article" 表示文档、页面、应用或网站中的独立结构，其意在成为可独立分配的或可复用的结构
+				<div>
+					HTML4:<div></div>
+				</div>	
+				</li>
+				<li>"html": 定义
+				<div>
+					HTML4:<div>Aside 的内容是独立的内容，但应与文档内容相关。</div>
+				</div>	
+				</li>
+				<li>"header" 定义页面或章节的头部。它经常包含logo、页面标题和导航性的目录
+				<div>
+					HTML4: <div></div>
+				</div>	
+				</li>
+				<li>"footer" 定义页面或章节的尾部。它经常包含版权信息、法律信息链接和反馈建议用的地址
+				<div>
+					HTML4: <div></div>
+				</div>	
+				</li>
+				<li>"main" 定义文档中主要或重要的独一无二的内容。一个文档中不能出现一个以上的
+				<div>
+					注意：不能在一个document中有多个main,不能在article,aside,footer,header或者nav中包含main
+				    HTML4: 无
+				</div>	
+				</li>
+				<li>"html": 定义
+				<div>
+					HTML4: <dl><h1>PRC</h1><p>The People's Republic of China was born in 1949...</p></dl>
+				</div>	
+				</li>
+				<li>"figcaption" 代表一个图例的说明
+				<div>
+					HTML4: 无
+				</div>	
+				</li>
+				<li>"hgroup"标签用于对网页或区段（section）的标题进行组合
+				<div>
+					HTML4: <div></div>
+				</div>	
+				</li>
+			</ul>
+			<b>章节格式</b>
+			<ul class="title">
+				<li>"data"将一个指定内容和机器可读的翻译联系在一起。但如果内容是与time和date相关的，一定要使用"time"
+				<div>
+					HTML4: 无
+				</div>	
+				</li>
+				<li>"time"代表日期和时间值；机器可读的等价形式通过datetime属性指定
+				<div>
+					HTML4: <span></span>
+				</div>	
+				</li>
+				<li>"mark"代表一段需要被高亮的引用文字，用来表示上下文的关联性
+				<div>
+					HTML4: <span></span>
+				</div>	
+				</li>
+				<li>"ruby"表示被ruby注释标记的文本，如中文汉字和它的拼音
+				<div>
+					HTML4: 无
+				</div>	
+				</li>
+				<li>"rt"代表ruby注释，如中文拼音
+				<div>
+					HTML4: 无
+				</div>	
+				</li>
+				<li>"rp"代表ruby注释两边的额外插入文本，用于在不支持ruby注释显示的浏览器中提供友好的注释显示
+				<div>
+					HTML4: 无
+				</div>	
+				</li>
+				<li>"bdi"代表需要脱离父元素文本方向的一段文本。它允许嵌入一段不同或未知文本方向格式的文本	
+				</li>
+				<li>"wbr"代表建议换行，当文本太长需要换行时将会在此处添加换行符
+				<div>
+					HTML4: 无
+				</div>	
+				</li>
+			</ul>
+			<b>媒介标记</b>
+			<ul class="title">
+				<li>"video"代表一段视频及其视频文件和字幕，并提供了播放视频的用户界面
+				<div>
+					HTML4:<object type="video/ogg" data="movie.ogv"><param name="src" value="movie.ogv"></object>
+				</div>	
+				</li>
+				<li>"audio"代表一段声音或音频流。 "audio"元素可以包含多个音频资源， 这些音频资源可以使用 src 属性或者"source"元素来进行描述
+				<div>
+					HTML4:<object type="application/ogg" data="someaudio.wav"><param name="src" value="someaudio.wav"></object>
+				</div>	
+				</li>
+				<li>"source"为"video"或"audio"这类媒体元素指定媒体源
+				<div>
+					HTML4: 无
+				</div>	
+				</li>
+				<li>"track"为"video"或<audio>这类媒体元素指定文本轨道（字幕）
+				<div>
+					HTML4: 无
+				</div>	
+				</li>
+				<li>"embed"代表一个嵌入的外部资源，如应用程序或交互内容，换句话说，就是一个插件。如:...
+				<div>
+					HTML4: <object data="flash.swf"  type="application/x-shockwave-flash"></object>
+				</div>	
+				</li>
+				<li>"canvas"代表位图区域，可以通过脚本在它上面实时呈现图形，如图表、游戏绘图等
+				<div>
+					HTML4:<object data="inc/hdr.svg" type="image/svg+xml" width="200" height="200"></object>
+				</div>	
+				</li>
+				<li>"svg"定义一个嵌入式矢量图
+				<div>
+					HTML4: 无
+				</div>	
+				</li>
+				<li>"math"定义一段数学公式
+				<div>
+					HTML4: 无
+				</div>	
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>
+	</body>
+</html>
