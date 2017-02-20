@@ -1,1 +1,100 @@
-
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>2017/2/8自我总结</title>
+		<style>
+			.box{
+				width: 800px;
+				height: auto;
+				margin: auto;
+				background-color: gainsboro;
+				border: 1px solid black;
+			}
+			.box>b{
+				display: block;
+				width: 700px;
+				height: 50px;
+				font-size: 30px;
+				line-height: 50px;
+				padding-left:100px ;
+				font-family: "微软雅黑";
+			}
+			.box>ul{
+				list-style: none;
+			}
+			.box>ul>li{
+				font-family: "微软雅黑";
+				font-size: 15px;
+				width: 800px;
+				height: 30px;
+				line-height: 30px;
+			}
+			.title>li:hover{
+				color: red;
+			}
+			.title>li>div{
+				padding-left: 20px;
+				width: 500px;
+				height: auto;
+				display: none;
+				background: white;
+				color: black;
+				margin-left: 250px;
+				margin-top: -30px;
+				position: absolute;
+				z-index: 10;
+			}
+			.title>li:hover div{
+				display: block;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<b>html5</b>
+			<b>html5 - 地理定位</b>
+			<ul class="title">
+				<li>地理位置（Geolocation）是 HTML5 的重要特性之一，提供了确定用户位置的功能</li>
+				<li>借助这个特性能够开发基于位置信息的应用。</li>
+				<li>在我的demo中使用的是百度提供的api接口，调用html5的geolocation方法获取客户端当前经纬度，</li>
+				<li>从而获得客户端所在的地理位置，包括省市区信息，甚至有街道、门牌号等详细的地理位置信息。</li>
+				<li>值得注意的一点是，PC很多浏览器对于html5的定位技术是不太友好的，</li>
+				<li>很多浏览器都是默认拒绝定位，一般只有IE是可以正常使用，但是获取到的经纬度偏差很大</li>
+				<li>最终的结论是，html5的定位在手机上测试是最佳的选择，PC建议使用IE浏览器。</li>
+			</ul>
+			<b>定位中处理错误信息的代码</b>
+			<ul class="title">
+				<li>Dermission Denied用户决绝对获取地理定位的请求</li>
+				<li>Position Unavailable位置信息是不可用的</li>
+				<li>Timeout请求用户地理位置超时</li>
+				<li>Unknow Error未知错误</li>
+			</ul>
+			<b>处理位置信息</b>
+			<ul class="title">
+				<li>var latlon=position.coords.latitude+","+position.coords.longitude获取当前位置信息</li>
+				<li>coords.latitude纬度 coords.longitude经度</li>
+				<li>watchPosition() - 返回用户的当前位置，并继续返回用户移动时的更新位置（就像汽车上的 GPS）</li>
+				<li>clearWatch() - 停止 watchPosition() 方法</li>
+			</ul>
+			<b>获取位置(百度为例)</b>
+			<ul class="title">
+				<li>var map= new BMap.Map('allmap')创建Map实例</li>
+				<li>map.centerAndZoom(new BMap.Point(position.coords.latitude,position.coords.longitude))</li>
+				<li>初始化地图，设置中心点坐标和地图级别</li>
+				<li>map.setCurrentCity('杭州')设置地图显示城市，此项是必须的</li>
+				<li>map.enableScrollWheelZoom(true)开启鼠标滚轮缩放</li>
+			</ul>
+			
+		</div>
+	</body>
+</html>
+	</body>
+</html>
