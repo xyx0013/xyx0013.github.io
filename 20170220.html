@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>2017/2/8自我总结</title>
+		<style>
+			.box{
+				width: 800px;
+				height: auto;
+				margin: auto;
+				background-color: gainsboro;
+				border: 1px solid black;
+			}
+			.box>b{
+				display: block;
+				width: 700px;
+				height: 50px;
+				font-size: 30px;
+				line-height: 50px;
+				padding-left:100px ;
+				font-family: "微软雅黑";
+			}
+			.box>ul{
+				list-style: none;
+			}
+			.box>ul>li{
+				font-family: "微软雅黑";
+				font-size: 15px;
+				width: 800px;
+				height: 30px;
+				line-height: 30px;
+			}
+			.title>li:hover{
+				color: red;
+			}
+			.title>li>div{
+				padding-left: 20px;
+				width: 500px;
+				height: auto;
+				display: none;
+				background: white;
+				color: black;
+				margin-left: 250px;
+				margin-top: -30px;
+				position: absolute;
+				z-index: 10;
+			}
+			.title>li:hover div{
+				display: block;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<b>cookie</b>
+			<ul class="title">
+				<li>cookie是存储于访问者的计算机中的变量</li>
+				<li>每当同一台计算机通过浏览器请求某个页面时，就会发送这个 cookie</li>
+				<li>cookie 是访问过的网站创建的文件，用于存储浏览信息，例如个人资料信息</li>
+				<li>从JavaScript的角度看cookie就是一些字符串信息，这些信息存放在客户端的计算机中，用于客户端计算机与服务器之间传递信息</li>
+				<li>在JavaScript中可以通过 document.cookie 来读取或设置这些信息</li>
+			</ul>
+			<b>cookie的基础知识</b>
+			<ul class="title">
+				<li>cookie是有大小限制的，每个cookie所存放的数据不能超过4kb</li>
+				<li>由于cookie最终都是以文件形式存放在客户端计算机中所以查看和修改cookie都是很方便的，这就是为什么常说cookie不能存放重要信息的原因</li>
+				<li>alert(typeof document.cookie)　结果是 string，也就是字符串</li>
+				<li>cookie是存在有效期的。在默认情况下，一个cookie的生命周期就是在浏览器关闭的时候结束</li>
+				<li>如果想要cookie能在浏览器关掉之后还可以使用，就必须要为该cookie设置有效期，也就是cookie的失效日期</li>
+			</ul>
+			<b>cookie的读取操作</b>
+			<ul class="title">
+				<li>function getCookie(c_name){</li>
+				<li>if(document.cookie.length>0){//先查询cookie是否为空，为空就return ""</li>
+				<li>c_start=document.cookie.indexOf(c_name + "=")</li>
+				<li>//通过String对象的indexOf()来检查这个cookie是否存在，不存在就为 -1</li>
+				<li>if (c_start!=-1){</li>
+				<li>c_start=c_start + c_name.length+1</li>
+				<li>//最后这个+1其实就是表示"="号啦，这样就获取到了cookie值的开始位置</li>
+				<li>c_end=document.cookie.indexOf(";",c_start)</li>
+				<li>if (c_end==-1) c_end=document.cookie.length</li>
+				<li>return unescape(document.cookie.substring(c_start,c_end))</li>
+				<li>}}return ""}</li>
+				<li>在输入cookie信息时不能包含空格，分号，逗号等特殊符号，而在一般情况下cookie信息的存储都是采用未编码的方式</li>
+				<li>在设置cookie信息以前要先使用escape()函数将cookie值信息进行编码</li>
+				<li>在获取到 cookie 值得时候再使用unescape()函数把值进行转换回来</li>
+			</ul>
+			<b>html5 WEB存储</b>
+			<ul class="title">
+				<li>HTML5 提供了两种在客户端存储数据的新方法：</li>
+				<li>localStorage - 没有时间限制的数据存储</li>
+				<li>sessionStorage - 针对一个 session 的数据存储</li>
+			</ul>
+			
+		</div>
+	</body>
+</html>
