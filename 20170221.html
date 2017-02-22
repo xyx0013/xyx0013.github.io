@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>2017/2/21自我总结</title>
+		<style>
+			.box{
+				width: 800px;
+				height: auto;
+				margin: auto;
+				background-color: gainsboro;
+				border: 1px solid black;
+			}
+			.box>b{
+				display: block;
+				width: 700px;
+				height: 50px;
+				font-size: 30px;
+				line-height: 50px;
+				padding-left:100px ;
+				font-family: "微软雅黑";
+			}
+			.box>ul{
+				list-style: none;
+			}
+			.box>ul>li{
+				font-family: "微软雅黑";
+				font-size: 15px;
+				width: 800px;
+				height: 30px;
+				line-height: 30px;
+			}
+			.title>li:hover{
+				color: red;
+			}
+			.title>li>div{
+				padding-left: 20px;
+				width: 500px;
+				height: auto;
+				display: none;
+				background: white;
+				color: black;
+				margin-left: 250px;
+				margin-top: -30px;
+				position: absolute;
+				z-index: 10;
+			}
+			.title>li:hover div{
+				display: block;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<b>CSS3</b>
+			<ul>
+				<li>Cascading Stylesheet层叠样式表</li>
+			</ul>
+			<b>CSS3选择符</b>
+			<b>元素选择符</b>
+			<ul class="title">
+				<li>通配选择符 (*) 指：所有元素对象
+				<div>
+					<ul>
+						<li>* { sRules }</li>
+						<li>例：*{margin:0;padding:0}</li>
+						<li>通常不建议使用通配选择符，因为它会遍历并命中文档中所有的元素，出于性能考虑，需酌情使用</li>
+					</ul>
+				</div>
+				</li>
+				<li>类型选择符(E) 指：以文档语言对象类型作为选择符 
+				<div>
+					<ul>
+						<li>E { sRules }</li>
+						<li>例：div{....};p{....};</li>
+					</ul>
+				</div>
+				</li>
+				<li>ID选择符(E#id) 指：以唯一标识符id属性等于myid的E对象作为选择符
+				<div>
+					<ul>
+						<li>E#myid { sRules }</li>
+						<li>例：div#asd 或#asd</li>
+					</ul>
+				</div>
+				</li>
+				<li>类选择符(E.class) 指：以class属性包含myclass的E对象作为选择符
+				<div>
+					<ul>
+						<li>E.myclass { sRules }</li>
+						<li>例：.a 或 .b</li>
+						<li>不同于ID选择符的唯一性，类选择符可以同时定义多个,如：.a.b</li>
+					</ul>
+				</div>
+				</li>
+			</ul>
+			<b>关系选择符</b>
+			<ul class="title">
+				<li>包含选择符(E F)
+				<div>
+					<ul>
+						<li>E F { sRules }</li>
+						<li>选择所有被E元素包含的F元素</li>
+						<li>与子选择符不同的是，包含选择符将会命中所有符合条件的后代，包括儿子，孙子，孙子的孙子...</li>
+					</ul>
+				</div>
+				</li>
+				<li>子选择符(E>F)
+				<div>
+					<ul>
+						<li>E>F { sRules }</li>
+						<li>选择所有作为E元素的子元素F</li>
+						<li>与包含选择符不同的是，子选择符只能命中子元素，而不能命中孙辈</li>
+					</ul>
+				</div>
+				</li>
+				<li>相邻选择符(E+F)
+				<div>
+					<ul>
+						<li>E+F { sRules }</li>
+						<li>选择紧贴在E元素之后F元素</li>
+						<li>与兄弟选择符不同的是，相邻选择符只会命中符合条件的相邻的兄弟元素</li>
+					</ul>
+				</div>
+				</li>
+				<li>兄弟选择符(E~F)
+				<div>
+					<ul>
+						<li>E~F { sRules }</li>
+						<li>选择E元素后面的所有兄弟元素F</li>
+						<li>与相邻选择符不同的是，兄弟选择符会命中所有符合条件的兄弟元素，而不强制是紧邻的元素</li>
+					</ul>
+				</div>
+				</li>
+			</ul>
+			<b>属性选择符</b>
+			<ul class="title">
+				<li>E[att]
+				<div>
+					<ul>
+						<li>E[att] { sRules }</li>
+						<li>选择具有att属性的E元素</li>
+						<li>例：a[class] 选择其中具有class属性的a元素</li>
+					</ul>
+				</div>
+				</li>
+				<li>E[att="val"]
+				<div>
+					<ul>
+						<li>E[att="val"] { sRules }</li>
+						<li>选择具有att属性且属性值等于val的E元素</li>
+						<li>例：a[class="external"] 选择其中具有class属性且属性值为external的a元素</li>
+					</ul>
+				</div>
+				</li>
+				<li>E[att~="val"]
+				<div>
+					<ul>
+						<li>E[att~="val"] { sRules }</li>
+						<li>选择具有att属性且属性值为一用空格分隔的字词列表，其中一个等于val的E元素（包含只有一个值且该值等于val的情况）</li>
+						<li>例：a[class~="external"]选择其中具有class属性且属性值为一用空格分隔的字词列表并且包含external的a元素</li>
+					</ul>
+				</div>
+				</li>
+				<li>E[att^="val"]
+				<div>
+					<ul>
+						<li>E[att^="val"] { sRules }</li>
+						<li>选择具有att属性且属性值为以val开头的字符串的E元素</li>
+						<li>例：li[class^="a"] 选择其中具有class属性且属性值以a为开头的字符串的li元素</li>
+					</ul>
+				</div>
+				</li>
+				<li>E[att$="val"]
+				<div>
+					<ul>
+						<li>E[att$="val"] { sRules }</li>
+						<li>选择具有att属性且属性值为以val结尾的字符串的E元素</li>
+						<li>例：li[class$="a"] 选择其中具有class属性且属性值以a为结尾的字符串的li元素</li>
+					</ul>
+				</div>
+				</li>
+				<li>E[att*="val"]
+				<div>
+					<ul>
+						<li>E[att*="val"] { sRules }</li>
+						<li>选择具有att属性且属性值为包含val的字符串的E元素</li>
+						<li>例：li[class*="a"] 选择其中具有class属性且属性值包含a的字符串的li元素</li>
+					</ul>
+				</div>
+				</li>
+				<li>E[att|="val"]
+				<div>
+					<ul>
+						<li>E[att|="val"] { sRules }</li>
+						<li>选择具有att属性且属性值为以val开头并用连接符"-"分隔的字符串的E元素，如果属性值仅为val，也将被选择</li>
+						<li>例：li[class|="test3"] 选择其中具有class属性且属性值以test3开头并用连接符"-"分隔的字符串的li元素，或属性值为test3的li元素</li>
+					</ul>
+				</div>
+				</li>
+			</ul>
+			<b>伪类选择符</b>
+			<ul class="title">
+				<li>E:link 指：设置超链接a在未被访问前的样式
+				<div>
+					<ul>
+						<li>E:link { sRules }</li>
+						<li>例：a:link{} 设置a元素在未被访问前的样式</li>
+					</ul>
+				</div>
+				</li>
+				<li>E:visited 指：设置超链接a在其链接地址已被访问过时的样式
+				<div>
+					<ul>
+						<li>E:visited { sRules }</li>
+						<li>例：a:visited{} 指：设置a元素已被被访问过时的样式</li>
+					</ul>
+				</div>
+				</li>
+				<li>E:hover 指：设置元素在其鼠标悬停时的样式
+				<div>
+					<ul>
+						<li>E:hover { sRules }</li>
+						<li>例：a:hover{} 指：设置a元素在其鼠标悬停时的样式</li>
+					</ul>
+				</div>
+				</li>
+				<li>E:active 指：设置元素在被用户激活（在鼠标点击与释放之间发生的事件）时的样式
+				<div>
+					<ul>
+						<li>E:active { sRules }</li>
+						<li>例：a:active{} 指：设置a元素在被用户激活（在鼠标点击与释放之间发生的事件）时的样式</li>
+					</ul>
+				</div>
+				</li>
+				<li>E:focus 指：设置对象在成为输入焦点（该对象的onfocus事件发生）时的样式
+				<div>
+					<ul>
+						<li>E:focus { sRules }</li>
+						<li>例：input:focus {} 指：设置input元素在成为输入焦点（该对象的onfocus事件发生）时的样式</li>
+						<li>webkit内核浏览器会默认给:focus状态的元素加上outline的样式</li>
+					</ul>
+				</div>
+				</li>
+				<li>E:lang(fr) 指：匹配使用特殊语言的E元素
+				<div>
+					<ul>
+						<li>E:lang(fr) { sRules }</li>
+						<li>例：p:lang(en){} 指：设置匹配使用特殊语言的p元素的样式</li>
+					</ul>
+				</div>
+				</li>
+				</li>
+				<li>E:not(s) 指：匹配不含有s选择符的元素E
+				<div>
+					<ul>
+						<li>E:not(s) { sRules }</li>
+						<li>有了这个选择符，那么你将可以很好的处理类似这样的场景：假定有个列表，每个列表项都有一条底边线，但是最后一项不需要底边线</li>
+						<li>.demo li:not(:last-child) {border-bottom: 1px solid #ddd;}</li>
+					</ul>
+				</div>
+				</li>
+				<li>E:root 指：匹配E元素在文档的根元素。在HTML中，根元素永远是HTML
+				<div>
+					<ul>
+						<li>E:root { sRules }</li>
+					</ul>
+				</div>
+				</li>
+				<li>E:first-child 指：匹配父元素的第一个子元素E
+				<div>
+					<ul>
+						<li>E:first-child { sRules }</li>
+						<li>要使该属性生效，E元素必须是某个元素的子元素，E的父元素最高是body，即E可以是body的子元素</li>
+						<li>li:first-child{} 设置第一个li元素的样式</li>
+					</ul>
+				</div>
+				</li>
+				<li>E:last-child 指：匹配父元素的最后一个子元素E
+				<div>
+					<ul>
+						<li>E:last-child { sRules }</li>
+						<li>E必须是它的兄弟元素中的最后一个元素，换言之，E必须是父元素的最后一个子元素</li>
+						<li>li:last-child{} 设置最后一个li元素的样式</li>
+					</ul>
+				</div>
+				</li>
+				<li>E:only-child 指：匹配父元素仅有的一个子元素E
+				<div>
+					<ul>
+						<li>E:only-child { sRules }</li>
+						<li>要使该属性生效，E元素必须是某个元素的子元素，E的父元素最高是body，即E可以是body的子元素</li>
+					</ul>
+				</div>
+				</li>
+				<li>E:nth-child(n) 指：匹配父元素的第n个子元素E，假设该子元素不是E，则选择符无效
+				<div>
+					<ul>
+						<li>E:nth-child(n) { sRules }</li>
+						<li>该选择符允许使用一个乘法因子(n)来作为换算方式，比如我们想选中所有的偶数子元素E，那么选择符可以写成：E:nth-child(2n)</li>
+						<li>li:nth-child(2){} 设置第二个li元素的样式</li>
+					</ul>
+				</div>
+				</li>
+				<li>E:nth-last-child(n) 指：匹配父元素的倒数第n个子元素E，假设该子元素不是E，则选择符无效
+				<div>
+					<ul>
+						<li>E:nth-last-child(n) { sRules }</li>
+						<li>li:nth-last-child(1){} 设置倒数第一个li元素的样式</li>
+					</ul>
+				</div>
+				</li>
+				<li>E:first-of-type 指：匹配同类型中的第一个同级兄弟元素E
+				<div>
+					<ul>
+						<li>E:first-of-type { sRules }</li>
+						<li>该选择符总是能命中父元素的第1个为E的子元素，不论第1个子元素是否为E</li>
+						<li>p:first-of-type{} 设置同类型中的第一个同级p元素</li>
+					</ul>
+				</div>
+				</li>
+				<li>E:last-of-type 指：匹配同类型中的最后一个同级兄弟元素E
+				<div>
+					<ul>
+						<li>E:last-of-type { sRules }</li>
+						<li>p:last-of-type{} 设置同类型中的最后一个同级p元素</li>
+					</ul>
+				</div>
+				</li>
+				<li>E:only-of-type 指：匹配同类型中的唯一的一个同级兄弟元素E
+				<div>
+					<ul>
+						<li>E:only-of-type { sRules }</li>
+						<li>p:only-of-type{} 设置同类型中的唯一一个同级p元素</li>
+					</ul>
+				</div>
+				</li>
+				<li>E:nth-of-type(n) 指：匹配同类型中的第n个同级兄弟元素E
+				<div>
+					<ul>
+						<li>E:nth-of-type(n) { sRules }</li>
+						<li>p:nth-of-type(2){} 设置同类型中的第二个同级p元素</li>
+					</ul>
+				</div>
+				</li>
+				<li>E:nth-last-of-type(n) 指：匹配同类型中的倒数第n个同级兄弟元素E
+				<div>
+					<ul>
+						<li>E:nth-last-of-type(n) { sRules }</li>
+						<li>p:nth-last-of-type(1){} 设置同类型中的倒数第一个同级p元素</li>
+					</ul>
+				</div>
+				</li>
+				<li>E:empty 指：匹配没有任何子元素（包括text节点）的元素E
+				<div>
+					<ul>
+						<li>E:empty { sRules }</li>
+						<li>p:empty {} 设置没有任何子元素（包括text节点）的p元素</li>
+					</ul>
+				</div>
+				</li>
+				<li>E:checked 指：匹配用户界面上处于选中状态的元素E。(用于input type为radio与checkbox时)
+				<div>
+					<ul>
+						<li>E:checked { sRules }</li>
+					</ul>
+				</div>
+				</li>
+				<li>E:enabled 指：匹配用户界面上处于可用状态的元素E
+				<div>
+					<ul>
+						<li>E:enabled { sRules }</li>
+						<li>input[type="text"]:enabled {} 设置匹配用户界面上处于可用状态的input元素</li>
+					</ul>
+				</div>
+				</li>
+				<li>E:disabled 指：匹配用户界面上处于禁用状态的元素E
+				<div>
+					<ul>
+						<li>E:disabled { sRules }</li>
+						<li>input[type="text"]:disabled {} 设置匹配用户界面上处于禁用状态的input元素</li>
+					</ul>
+				</div>
+				</li>
+				<li>E:target 指：匹配相关URL指向的E元素
+				<div>
+					<ul>
+						<li>E:target { sRules }</li>
+						<li>.panel:target{} 设置匹配相关URL指向的.panel类选择器的样式</li>
+					</ul>
+				</div>
+				</li>
+			</ul>	
+			<b>伪对象选择符</b>
+			<ul class="title">
+				<li>E:first-letter/E::first-letter 指：设置对象内的第一个字符的样式
+				<div>
+					<ul>
+						<li>E:first-letter/E::first-letter { sRules }</li>
+						<li>此伪对象仅作用于块对象。内联对象要使用该伪对象，必须先将其设置为块级对象</li>
+						<li>该伪类常被用来配合font-size属性和float属性制作首字下沉效果</li>
+					</ul>
+				</div>
+				</li>
+				<li>E:first-line/E::first-line 指：设置对象内的第一行的样式 
+				<div>
+					<ul>
+						<li>E:first-line/E::first-line { sRules }</li>
+						<li>p:first-line{}</li>
+					</ul>
+				</div>
+				</li>
+				<li>E:before/E::before 指：设置在对象前（依据对象树的逻辑结构）发生的内容。</li>
+				<li>用来和content属性一起使用，并且必须定义content属性
+				<div>
+					<ul>
+						<li>E:before/E::before { sRules }</li>
+					</ul>
+				</div>
+				</li>
+				<li>E:after/E::after 指：设置在对象后（依据对象树的逻辑结构）发生的内容。</li>
+				<li>用来和content属性一起使用，并且必须定义content属性
+				<div>
+					<ul>
+						<li>E:after/E::after { sRules }</li>
+					</ul>
+				</div>
+				</li>
+				<li>E::placeholder 指：设置对象文字占位符的样式
+				<div>
+					<ul>
+						<li>E::placeholder { sRules }</li>
+						<li>::placeholder 伪元素用于控制表单输入框占位符的外观，它允许开发者/设计师改变文字占位符的样式，默认的文字占位符为浅灰色</li>
+						<li>当表单背景色为类似的颜色时它可能效果并不是很明显，那么就可以使用这个伪元素来改变文字占位符的颜色</li>
+						<li>需要注意的是，除了Firefox是 ::[prefix]placeholder，其他浏览器都是使用 ::[prefix]input-placeholder</li>
+					</ul>
+				</div>
+				</li>
+				<li>E::selection 指：设置对象被选择时的样式
+				<div>
+					<ul>
+						<li>E::selection { sRules }</li>
+						<li>需要注意的是，::selection只能定义被选择时的background-color，color及text-shadow(IE11尚不支持定义该属性)</li>
+					</ul>
+				</div>
+				</li>
+			</ul>
+			</ul>
+		</div>
+	</body>
+</html>
