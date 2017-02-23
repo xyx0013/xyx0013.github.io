@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>2017/2/21自我总结</title>
+		<style>
+			.box{
+				width: 800px;
+				height: auto;
+				margin: auto;
+				background-color: gainsboro;
+				border: 1px solid black;
+			}
+			.box>b{
+				display: block;
+				width: 700px;
+				height: 50px;
+				font-size: 30px;
+				line-height: 50px;
+				padding-left:100px ;
+				font-family: "微软雅黑";
+			}
+			.box>ul{
+				list-style: none;
+			}
+			.box>ul>li{
+				font-family: "微软雅黑";
+				font-size: 15px;
+				width: 800px;
+				height: 30px;
+				line-height: 30px;
+			}
+			.title>li:hover{
+				color: red;
+			}
+			.title>li>div{
+				padding-left: 20px;
+				width: 500px;
+				height: auto;
+				display: none;
+				background: white;
+				color: black;
+				margin-left: 250px;
+				margin-top: -30px;
+				position: absolute;
+				z-index: 10;
+			}
+			.title>li:hover div{
+				display: block;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<b>CSS3属性</b>
+			<b>变换transform</b>
+			<ul class="title">
+				<li>transform：none
+				<div>
+					<ul>
+						<li>none：无转换</li>
+					</ul>
+				</div>
+				</li>
+				<li>matrix()：以一个含六值的(a,b,c,d,e,f)变换矩阵的形式指定一个2D变换，相当于直接应用一个[a,b,c,d,e,f]变换矩阵
+				<div>
+					<ul>
+						<li>matrix() = matrix(<number>[,<number>]{5,5})</li>
+					</ul>
+				</div>
+				</li>
+				<li>translate()：指定对象的2D translation（2D平移）
+				<div>
+					<ul>
+						<li>translate() = translate(<translation-value>[,<translation-value>]?)</li>
+						<li>第一个参数对应X轴，第二个参数对应Y轴。如果第二个参数未提供，则默认值为0</li>
+						<li>translatex()：指定对象X轴（水平方向）的平移</li>
+						<li>translatey()：指定对象Y轴（垂直方向）的平移</li>
+					</ul>
+				</div>
+				</li>
+				<li>translate3d()：指定对象的3D位移
+				<div>
+					<ul>
+						<li>translate3d() = translate3d(<translation-value>,<translation-value>,<length>)</li>
+						<li>第1个参数对应X轴，第2个参数对应Y轴，第3个参数对应Z轴，参数不允许省略</li>
+						<li>translatez()：指定对象Z轴的平移</li>
+					</ul>
+				</div>
+				</li>
+				<li>rotate()：指定对象的2D rotation（2D旋转）</li>
+				<li>rotate3d()：指定对象的3D旋转角度，其中前3个参数分别表示旋转的方向x,y,z，第4个参数表示旋转的角度，参数不允许省略
+				<div>
+					<ul>
+						<li>rotatex()：指定对象在x轴上的旋转角度</li>
+						<li>rotatey()：指定对象在y轴上的旋转角度</li>
+						<li>rotatez()：指定对象在z轴上的旋转角度</li>
+					</ul>
+				</div>
+				</li>
+				<li>scale()：指定对象的2D scale（2D缩放）
+				<div>
+					<ul>
+						<li>scale() = scale(<number>[,<number>]?)</li>
+						<li>第一个参数对应X轴，第二个参数对应Y轴。如果第二个参数未提供，则默认取第一个参数的值</li>
+						<li>scalex()：指定对象X轴的（水平方向）缩放</li>
+						<li>scaley()：指定对象Y轴的（垂直方向）缩放</li>
+					</ul>
+				</div>
+				</li>
+				<li>指定对象的3D缩放。
+				<div>
+					<ul>
+						<li>scale3d() = scale3d(<number>,<number>,<number>)</li>
+						<li>第1个参数对应X轴，第2个参数对应Y轴，第3个参数对应Z轴，参数不允许省略</li>
+						<li>scalez()：指定对象的z轴缩放</li>
+					</ul>
+				</div>
+				</li>
+				<li>skew()：指定对象skew transformation（斜切扭曲）。
+				<div>
+					<ul>
+						<li>skew() = skew(<angle>[,<angle>]?)</li>
+						<li>第一个参数对应X轴，第二个参数对应Y轴。如果第二个参数未提供，则默认值为0</li>
+						<li>skewx()：指定对象X轴的（水平方向）扭曲</li>
+						<li>skewy()：指定对象Y轴的（垂直方向）扭曲</li>
+					</ul>
+				</div>
+				</li>
+			</ul>
+			<b>动画animation</b>
+			<ul class="title">
+				<li><' animation-name '>：检索或设置对象所应用的动画名称
+				<div>
+					<ul>
+						<li>检索或设置对象所应用的动画名称，必须与规则@keyframes配合使用，因为动画名称由@keyframes定义</li>
+					</ul>
+				</div>
+				</li>
+				<li><' animation-duration '>：检索或设置对象动画的持续时间
+				<div>
+					<ul>
+						<li><time>：指定对象动画的持续时间</li>
+					</ul>
+				</div>
+				</li>
+				<li><' animation-timing-function '>：检索或设置对象动画的过渡类型
+				<div>
+					<ul>
+						<li>linear：线性过渡。等同于贝塞尔曲线(0.0, 0.0, 1.0, 1.0)</li>
+						<li>ease：平滑过渡。等同于贝塞尔曲线(0.25, 0.1, 0.25, 1.0)</li>
+						<li>ease-in：由慢到快。等同于贝塞尔曲线(0.42, 0, 1.0, 1.0)</li>
+						<li>ease-out：由快到慢。等同于贝塞尔曲线(0, 0, 0.58, 1.0)</li>
+						<li>ease-in-out：由慢到快再到慢。等同于贝塞尔曲线(0.42, 0, 0.58, 1.0)</li>
+						<li>step-start：等同于 steps(1, start)</li>
+						<li>step-end：等同于 steps(1, end)</li>
+						<li>steps(<integer>[, [ start | end ] ]?)：接受两个参数的步进函数。第一个参数必须为正整数，指定函数的步数。第二个参数取值可以是start或end，指定每一步的值发生变化的时间点。第二个参数是可选的，默认值为end。</li>
+						<li>cubic-bezier(<number>, <number>, <number>, <number>)：特定的贝塞尔曲线类型，4个数值需在[0, 1]区间内</li>
+					</ul>
+				</div>
+				</li>
+				<li><' animation-delay '>：检索或设置对象动画延迟的时间</li>
+				<li><' animation-iteration-count '>：检索或设置对象动画的循环次数
+				<div>
+					<ul>
+						<li>infinite：无限循环</li>
+						<li><number>：指定对象动画的具体循环次数</li>
+					</ul>
+				</div>
+				</li>
+				<li><' animation-direction '>：检索或设置对象动画在循环中是否反向运动
+				<div>
+					<ul>
+						<li>normal：正常方向</li>
+						<li>reverse：反方向运行</li>
+						<li>alternate：动画先正常运行再反方向运行，并持续交替运行</li>
+						<li>alternate-reverse：动画先反运行再正方向运行，并持续交替运行</li>
+					</ul>
+				</div>
+				</li>
+				<li><' animation-fill-mode '>：检索或设置对象动画时间之外的状态
+				<div>
+					<ul>
+						<li>none：默认值。不设置对象动画之外的状态</li>
+						<li>forwards：设置对象状态为动画结束时的状态</li>
+						<li>backwards：设置对象状态为动画开始时的状态</li>
+						<li>both：设置对象状态为动画结束或开始的状态</li>
+					</ul>
+				</div>
+				</li>
+			</ul>
+			
+		</div>
+	</body>
+</html>
